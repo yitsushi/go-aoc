@@ -62,6 +62,9 @@ func (c *Client) DownloadAndSaveInput(year, day int, targetFile string) error {
 	defer outputFile.Close()
 
 	_, err = io.Copy(outputFile, file)
+	if err != nil {
+		return fmt.Errorf("unable to copy response into the output file: %w", err)
+	}
 
-	return fmt.Errorf("unable to copy response into the output file: %w", err)
+	return nil
 }
