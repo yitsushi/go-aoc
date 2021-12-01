@@ -32,3 +32,12 @@ type NotImplementedError struct{}
 func (e NotImplementedError) Error() string {
 	return "501 - not implemented"
 }
+
+// InputParseError occurs when something is not implemented.
+type InputParseError struct {
+	Message string
+}
+
+func (e InputParseError) Error() string {
+	return fmt.Sprintf("input parse error: %s", e.Message)
+}
