@@ -61,3 +61,9 @@ func (v Vector2D) Neighbours() []Vector {
 func (v Vector2D) Values() []float64 {
 	return []float64{v.X, v.Y}
 }
+
+// Vector2DInt is a 2D vector.
+type Vector2DInt struct {
+	X int
+	Y int
+}
